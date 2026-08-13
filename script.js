@@ -8,7 +8,7 @@ async function loadNavigation() {
 
     try {
 
-        const response = await fetch("templates/nav.html");
+        const response = await fetch("nav.html");
 
         if (!response.ok) {
             throw new Error("Navigation could not be loaded.");
