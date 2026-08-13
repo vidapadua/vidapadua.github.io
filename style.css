@@ -62,45 +62,55 @@ video {
 ========================================= */
 
 /*
-   ONLY TWO LEVELS:
+   THREE TEXT LEVELS
 
-   1. BIG + BOLD
-   2. REGULAR
-
-   Anything that needs emphasis becomes
-   BIG + BOLD rather than creating another
-   font size.
+   1. H1 = BIG + BOLD
+   2. H2 = NORMAL + BOLD
+   3. P  = NORMAL + REGULAR
 */
 
-h1,
-h2,
-h3 {
+
+/* BIG HEADING */
+
+h1 {
     margin: 0;
 
+    font-size: clamp(3rem, 5vw, 7rem);
+
     font-weight: 700;
+
+    line-height: 0.95;
 
     letter-spacing: -0.04em;
 }
 
-h1 {
-    font-size: clamp(3rem, 7vw, 7rem);
-    line-height: 0.95;
-}
+
+/* NORMAL BOLD HEADING */
 
 h2 {
-    font-size: clamp(2.5rem, 5vw, 5rem);
-    line-height: 0.95;
+    margin: 0;
+
+    font-size: 1rem;
+
+    font-weight: 700;
+
+    line-height: 1.6;
+
+    letter-spacing: normal;
 }
 
-h3 {
-    font-size: clamp(2rem, 4vw, 4rem);
-    line-height: 1;
-}
+
+/* NORMAL REGULAR TEXT */
 
 p,
 li {
     font-size: 1rem;
+
+    font-weight: 400;
+
     line-height: 1.6;
+
+    letter-spacing: normal;
 }
 
 
@@ -718,4 +728,11 @@ main {
         gap: 1rem;
     }
 
+}
+
+.underline {
+    text-decoration-line: underline;
+    text-decoration-thickness: 3px;
+    text-decoration-color: #111111;
+    text-underline-offset: 0.1em;
 }
