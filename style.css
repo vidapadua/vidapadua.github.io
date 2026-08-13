@@ -293,7 +293,7 @@ section {
 
 
 /* =========================================
-   MOBILE
+   MOBILE NAVIGATION
 ========================================= */
 
 @media (max-width: 768px) {
@@ -303,25 +303,54 @@ section {
     }
 
     .nav-inner {
-        padding:
-            0
-            var(--page-padding);
-    }
+        width: 100%;
 
-    .nav-name {
-        font-size: 0.9rem;
-    }
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
 
-    .nav-links {
         gap: 1rem;
     }
 
+    .nav-name {
+        font-size: 1rem;
+
+        flex-shrink: 0;
+    }
+
+    .nav-links {
+        display: flex;
+
+        align-items: center;
+
+        gap: 1rem;
+
+        overflow-x: auto;
+
+        white-space: nowrap;
+
+        /*
+           Hide scrollbar while keeping
+           horizontal scrolling available.
+        */
+        scrollbar-width: none;
+    }
+
+    .nav-links::-webkit-scrollbar {
+        display: none;
+    }
+
     .nav-links a {
-        font-size: 0.75rem;
+        font-size: 1rem;
+
+        flex-shrink: 0;
     }
 
     body {
-        padding-top: 52px;
+        padding:
+            52px  /* top */
+            20px  /* right */
+            52px  /* bottom */
+            20px; /* left */
     }
 
     section {
