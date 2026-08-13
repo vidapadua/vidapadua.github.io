@@ -1,0 +1,34 @@
+{
+    "employment": [
+        {
+            "title": "Accountant",
+            "company": "Company Name",
+            "date": "2022 — Present",
+            "responsibilities": [
+                "Managed daily accounting and financial records.",
+                "Prepared reports and maintained accurate documentation.",
+                "Worked with internal teams to resolve accounting issues."
+            ]
+        },
+        {
+            "title": "Accountant",
+            "company": "Company Name",
+            "date": "2019 — 2022",
+            "responsibilities": [
+                "Managed accounts payable and accounts receivable.",
+                "Prepared reconciliations and financial records.",
+                "Assisted with monthly reporting and closing."
+            ]
+        },
+        {
+            "title": "Accounting Assistant",
+            "company": "Company Name",
+            "date": "2017 — 2019",
+            "responsibilities": [
+                "Supported bookkeeping and day-to-day accounting operations.",
+                "Organized financial documentation and records.",
+                "Assisted with data entry and reconciliation."
+            ]
+        }
+    ]
+}

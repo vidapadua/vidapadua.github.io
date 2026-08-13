@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vida Rose Padua | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h1>Vida Rose Padua</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Summary</a></li>
+                <li><a href="#portfolio">Experience</a></li>
+                <li><a href="#skills">Technical Skills</a></li>
+                <li><a href="#qualification">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="content">
+
+        <section id="home" class="hero">
+            <h2>Management Accounting Graduate</h2>
+            <p>
+                Management Accounting graduate with 5 years of experience in accounts receivable,
+                reconciliations, billing, and financial record maintenance, with proficiency in
+                Excel, QuickBooks, Sage 50, and ERP systems.
+            </p>
+        </section>
+
+        <section id="portfolio" class="portfolio">
+            <h2>Professional Experience</h2>
+
+            <div class="project-grid">
+
+                <div class="project">
+                    <h3>Billing & Accounts Receivable Specialist (2021–Present)</h3>
+                    <p><strong>Yardworx Calgary & Edmonton | Calgary, AB</strong></p>
+                    <p>
+                        - Manage full-cycle accounts receivable, including invoicing, payment processing,
+                        collections, account maintenance, and customer account reconciliation.
+                    </p>
+                    <p>
+                        - Process high-volume invoices, receipts, credits, refunds, adjustments, and
+                        payment transactions while ensuring accuracy and compliance.
+                    </p>
+                    <p>
+                        - Perform account and bank reconciliations, support month-end accounting,
+                        generate reports, maintain ERP records, and process approximately
+                        15,000 service orders annually.
+                    </p>
+                    <p>
+                        - Collaborate with management to improve billing workflows, train new employees,
+                        and resolve customer billing inquiries.
+                    </p>
+                </div>
+
+                <div class="project">
+                    <h3>Front End Customer Service Associate (2019–2021)</h3>
+                    <p><strong>A&W Food Services of Canada | Calgary, AB</strong></p>
+                    <p>
+                        - Processed high-volume cash, debit, and credit transactions while maintaining
+                        accuracy in a fast-paced environment.
+                    </p>
+                    <p>
+                        - Demonstrated strong teamwork, professionalism, attention to detail, and problem-solving skills.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="skills" class="skills">
+            <h2>Technical Skills</h2>
+            <p>
+                Accounts Receivable • Billing • Account Reconciliation • Bank Reconciliation •
+                Payment Processing • Financial Record Maintenance • Collections • Month-End Support •
+                General Accounting Support • Data Entry • Financial Reporting •
+                Microsoft Excel (Macros, Pivot Tables, VLOOKUP, SUMIFS) •
+                Future Tax • QuickBooks Online • Sage 50 •
+                ERP Systems (PestPac/WorkWave, Jobber) • SQL •
+                Google Workspace • Microsoft Word • Microsoft PowerPoint
+            </p>
+        </section>
+
+        <section id="qualification" class="qualification">
+            <h2>Education</h2>
+
+            <p>
+                <strong>Bachelor of Science in Management Accounting</strong><br>
+                University of Lethbridge | Alberta | 2023
+            </p>
+
+            <p>
+                <strong>Bachelor of Science in Management Accounting</strong><br>
+                University of the Cordilleras | Philippines | 2019
+            </p>
+
+            <h3>Additional Information</h3>
+            <p>Class 5 Driver's License</p>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Contact Me</h2>
+
+            <p>Location: Calgary, AB</p>
+            <p>Phone: 403-899-5877</p>
+            <p>Email: <a href="mailto:vidad.padua@gmail.com">vidad.padua@gmail.com</a></p>
+            <p>LinkedIn: <a href="#" target="_blank">LinkedIn</a></p>
+
+        </section>
+
+    </div>
+</body>
+</html>

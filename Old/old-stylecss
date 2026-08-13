@@ -1,0 +1,321 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Typography & Color Theme */
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;              /* Base font size */
+    background-color: #f6f5f2;
+    color: #2e2e2e;
+    line-height: 1.75;
+    display: flex;
+}
+
+/* Sidebar Navigation */
+.sidebar {
+    width: 350px;
+    height: 100vh;
+    background-color: #2e3b31;
+    color: white;
+    padding: 60px 70px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar h1 {
+    font-size: 1.25rem;              /* Large */
+    font-weight: 600;
+    color: #e1e1e1;
+    margin-bottom: 32px;
+}
+
+.sidebar nav ul {
+    list-style: none;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 28px;
+}
+
+.sidebar nav ul li a {
+    color: #d1d1d1;
+    text-decoration: none;
+    font-size: 1.25rem;           /* Medium */
+    font-weight: 500;
+    display: block;
+    transition: color 0.3s ease, transform 0.3s ease;
+    padding-left: 20px;
+}
+
+.sidebar nav ul li a:hover {
+    color: #a5c4c2;
+    transform: translateX(6px);
+}
+
+/* Main Content */
+.content {
+    margin-left: 350px;
+    margin-right: 200px;
+    padding: 80px 60px;
+    width: 90%;
+}
+
+.hero {
+    background-color: #eef0ed;
+    padding: 72px 48px;
+    border-radius: 16px;
+    margin-bottom: 72px;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(0,0,0,.08);
+}
+
+.hero h2 {
+    font-size: 2rem;              /* Large */
+    font-weight: 700;
+    color: #2e3b31;
+    margin-bottom: 24px;
+}
+
+.hero p {
+    font-size: 1rem;              /* Regular */
+    color: #555;
+    margin: 0;
+}
+
+/* Sections */
+section {
+    margin-bottom: 80px;
+}
+
+h2 {
+    font-size: 2rem;              /* Large */
+    font-weight: 700;
+    margin-bottom: 32px;
+    color: #333;
+}
+
+/* Portfolio */
+.portfolio .project-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+}
+
+.project {
+    background-color: #fff;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 6px 14px rgba(0,0,0,.1);
+    transition: transform .3s ease, box-shadow .3s ease;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.project:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,.15);
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.project h3 {
+    font-size: 1.25rem;           /* Medium */
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.project p,
+.skills p,
+.qualification p,
+.contact p,
+.contact a {
+    font-size: 1rem;              /* Regular */
+}
+
+/* Contact */
+.contact a {
+    color: #4d4d4d;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color .3s ease;
+}
+
+.contact a:hover {
+    color: #a5c4c2;
+}
+
+/* ===========================
+   Responsive Design
+=========================== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+
+    body {
+        display: block;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        z-index: 1000;
+
+        padding: 16px 20px;
+        background-color: #2e3b31;
+    }
+
+    .sidebar nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .sidebar nav ul li {
+        margin-bottom: 0;
+    }
+
+    .sidebar nav ul li a {
+        padding-left: 0;
+    }
+
+    .content {
+        width: 100%;
+        margin: 0;
+        padding: 40px 24px;
+        padding-top: 140px;
+
+    }
+
+    .hero {
+        padding: 40px 32px;
+    }
+
+    .project {
+        padding: 24px;
+    }
+}
+
+
+/* Phones */
+@media (max-width: 768px) {
+
+    body {
+        display: block;
+    }
+
+    .sidebar {
+        padding: 5px;
+    }
+
+    .sidebar h1 {
+        font-size: 1 rem;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    .sidebar nav ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .sidebar nav ul li {
+        margin: 0;
+    }
+
+    .sidebar nav ul li a {
+        padding: 6px 10px;
+    }
+
+    .content {
+        padding: 60 px;
+    }
+
+    .hero {
+        padding: 28px 24px;
+    }
+
+    .hero h2,
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .project {
+        padding: 20px;
+    }
+
+    .project h3 {
+        font-size: 1.1rem;
+    }
+
+    .project p,
+    .hero p,
+    .skills p,
+    .qualification p,
+    .contact p,
+    .contact a {
+        font-size: 0.95rem;
+    }
+}
+
+
+/* Small Phones */
+@media (max-width: 480px) {
+
+    .content {
+        padding: 16px;
+    }
+
+    .hero {
+        padding: 20px;
+    }
+
+    .project {
+        padding: 16px;
+    }
+
+    .sidebar {
+        padding: 16px;
+    }
+
+    .sidebar nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .sidebar h1 {
+        font-size: 1.3rem;
+    }
+
+    .hero h2,
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    .project h3 {
+        font-size: 1rem;
+    }
+}

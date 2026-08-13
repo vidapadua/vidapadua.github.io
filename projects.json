@@ -1,0 +1,28 @@
+{
+    "technicalSkills": [
+        {
+            "title": "Excel",
+            "description": "Demonstration of how I use Excel for financial reporting, formulas, data organization, reconciliation, and other accounting tasks.",
+            "media": "assets/excel.mp4",
+            "mediaType": "video"
+        },
+        {
+            "title": "QuickBooks",
+            "description": "Demonstration of my experience using QuickBooks for bookkeeping, transaction management, reconciliation, reporting, and day-to-day accounting work.",
+            "media": "assets/quickbooks.mp4",
+            "mediaType": "video"
+        },
+        {
+            "title": "Financial Reporting",
+            "description": "A practical demonstration of how I organize accounting information and turn financial data into useful reports.",
+            "media": "assets/financial-reporting.mp4",
+            "mediaType": "video"
+        },
+        {
+            "title": "Data Organization",
+            "description": "A demonstration of how I organize, clean, review, and maintain financial information.",
+            "media": "assets/data-organization.mp4",
+            "mediaType": "video"
+        }
+    ]
+}
