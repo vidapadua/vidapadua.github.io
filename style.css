@@ -223,7 +223,6 @@ main {
 .overview {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 .overview-top {
@@ -482,7 +481,7 @@ main {
 
     .overview {
         min-height: auto;
-        gap: 6rem;
+        gap: 1rem;
     }
 
     .overview-main h1 {
@@ -494,7 +493,7 @@ main {
 
     .employment {
         display: block;
-        padding: 3rem 0;
+        padding: 2rem 0;
     }
 
     .employment-heading {
