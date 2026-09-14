@@ -479,8 +479,14 @@ main {
 
     /* Overview */
 
+    /* Overview */
+
     .overview {
-        min-height: auto;
+        min-height: 0;
+    }
+
+    .overview-main h1 {
+        font-size: clamp(3rem, 13vw, 5rem);
     }
 
     .overview-main h1 {
@@ -492,7 +498,7 @@ main {
 
     .employment {
         display: block;
-        padding: 2rem 0;
+        padding: 1rem 0;
     }
 
     .employment-heading {
@@ -504,11 +510,11 @@ main {
 
     .technical-skill {
         display: block;
-        padding: 3rem 0;
+        padding: 2rem 0;
     }
 
     .technical-skill-info {
-        margin-bottom: 2.5rem;
+        margin-bottom: 1rem;
     }
 
 
