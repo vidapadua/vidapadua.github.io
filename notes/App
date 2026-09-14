@@ -1,0 +1,1295 @@
+┌──────────────────────────────────────────────┐
+│ PRAIRIE PEAK ACCOUNTING SYSTEM               │
+├──────────────────────────────────────────────┤
+│                                              │
+│  01  OVERVIEW                                │
+│      Dashboard                               │
+│                                              │
+│  02  DATA & LEDGER                           │
+│      Transactions                            │
+│      Chart of Accounts                       │
+│      General Ledger                          │
+│      Journal Entries                         │
+│                                              │
+│  03  OPERATIONS                              │
+│      Accounts Payable                        │
+│      Accounts Receivable                     │
+│      Expenses                                │
+│      Banking                                 │
+│                                              │
+│  04  CLOSE & RECONCILIATION                  │
+│      Bank Reconciliation                     │
+│      Credit Card Reconciliation              │
+│      Account Reconciliations                 │
+│      Month-End Close                         │
+│                                              │
+│  05  FINANCIAL REPORTING                     │
+│      Income Statement                        │
+│      Balance Sheet                           │
+│      Cash Flow                               │
+│      Management Reporting                    │
+│                                              │
+│  06  ANALYSIS                                │
+│      Variance Analysis                       │
+│      Trends                                  │
+│      Year-over-Year                          │
+│                                              │
+│  07  COMPLIANCE & AUDIT                      │
+│      GST                                     │
+│      Audit Support                           │
+│      Working Papers                          │
+│      Internal Controls                       │
+│                                              │
+│  08  DATA & EXCEL                            │
+│      Data Cleaning                           │
+│      Excel Tools                             │
+│      Validation                              │
+│                                              │
+└──────────────────────────────────────────────┘
+
+
+Absolutely — that's actually **better architecture**. The foundation dataset should be pristine and internally reconciled. Then your app can have a separate process that **corrupts/copies selected records** to create the "messy ERP export" for the data-cleaning demo.
+
+ That way you always have a **golden source of truth** to test against.
+
+ Here is the revised master prompt:
+
+ # Generate a Large, Perfectly Reconciled ERP-Style Canadian Accounting Dataset
+
+ I am building a portfolio application to demonstrate technical accounting, data processing, reconciliation, month-end close, financial reporting, financial analysis, and accounting-system skills for Junior/Intermediate/Staff Accountant roles in Calgary, Alberta.
+
+ I want you to generate a **large, realistic, perfectly internally consistent Excel workbook** that will serve as the foundational "golden dataset" for my application.
+
+ This is the **clean source-of-truth dataset**.
+
+ Do NOT introduce errors, duplicates, missing values, inconsistent formatting, invalid GST, incorrect account mappings, or reconciliation discrepancies into this version.
+
+ I will create a separate data-corruption/cleaning layer later that intentionally introduces problems into copies of this data.
+
+ The goal is to create a miniature but realistic accounting/ERP environment that could plausibly exist behind a medium-sized Canadian company's accounting system.
+
+ The data should support this workflow:
+
+ **ERP Source Data → Accounting Processing → Subledgers → General Ledger → Reconciliations → Month-End Close → Trial Balance → Financial Statements → Variance Analysis → Management Reporting → Audit Support**
+
+---
+
+ # 1\. Fictional Company
+
+ Create:
+
+ **Prairie North Energy Services Ltd.**
+
+ Location:
+
+ **Calgary, Alberta, Canada**
+
+ Industry:
+
+ **Oilfield services + equipment rental + industrial parts**
+
+ Business size:
+
+ - Medium-sized Canadian company
+- Approximately 45–60 employees
+- Approximately CAD $8–12 million annual revenue
+- Alberta-based operations
+- GST registrant
+- Multiple departments
+- Multiple customers and vendors
+- Multiple revenue streams
+- Significant equipment/fixed assets
+- Company vehicles and heavy equipment
+- Meaningful AP and AR balances
+- Seasonal business activity
+
+ Primary currency:
+
+ **CAD**
+
+ Fiscal year:
+
+ **January 1 – December 31**
+
+ GST:
+
+ **5%**
+
+ All data should be fictional.
+
+ Do not use real individuals or sensitive personal information.
+
+---
+
+ # 2\. Golden Dataset Principle
+
+ This workbook is the **perfect source-of-truth dataset**.
+
+ Every table must be internally consistent.
+
+ Do NOT intentionally create:
+
+ - duplicates
+- missing required fields
+- invalid account numbers
+- incorrect dates
+- incorrect GST
+- unmatched invoices
+- unexplained bank differences
+- broken foreign keys
+- unbalanced journal entries
+- incorrect depreciation
+- unexplained AR/AP balances
+- incorrect financial statements
+
+ Every legitimate business exception should be represented correctly rather than as an error.
+
+ For example, an invoice that is legitimately unpaid should have:
+
+ `Invoice → AR → Outstanding Balance`
+
+ rather than being considered a data error.
+
+---
+
+ # 3\. Time Period
+
+ Generate two complete fiscal years:
+
+ **January 1, 2025 – December 31, 2025**
+
+ and
+
+ **January 1, 2026 – December 31, 2026**
+
+ Include:
+
+ - transaction date
+- document date
+- posting date
+- fiscal year
+- fiscal quarter
+- fiscal period
+- month
+- year
+
+ Use realistic seasonality.
+
+ Do not simply generate identical monthly activity.
+
+---
+
+ # 4\. Business Divisions
+
+ Create:
+
+ ### Field Services
+
+ Examples:
+
+ - field technicians
+- equipment operators
+- maintenance
+- service calls
+- emergency service
+- inspections
+- field support
+
+ ### Equipment Rental
+
+ Examples:
+
+ - compressors
+- generators
+- pumps
+- trailers
+- specialized equipment
+
+ ### Parts & Supplies
+
+ Examples:
+
+ - replacement parts
+- industrial supplies
+- safety equipment
+- consumables
+
+ These divisions should connect to departments, projects, revenue, expenses, and reporting dimensions.
+
+---
+
+ # 5\. Master Data
+
+ Create the following sheets.
+
+ ## Company
+
+ Fields:
+
+ - Company\_ID
+- Company\_Name
+- Legal\_Name
+- Province
+- Country
+- Currency
+- Fiscal\_Year\_End
+- GST\_Registration
+- GST\_Rate
+
+ ## Chart\_of\_Accounts
+
+ Create a realistic account hierarchy.
+
+ Include:
+
+ ### Assets
+
+ - Cash
+- Bank
+- Accounts Receivable
+- Inventory
+- Prepaid Expenses
+- Deposits
+- Fixed Assets
+- Accumulated Depreciation
+
+ ### Liabilities
+
+ - Accounts Payable
+- Accrued Liabilities
+- GST Payable
+- Payroll Liabilities
+- Equipment Financing
+- Other Current Liabilities
+
+ ### Equity
+
+ - Share Capital
+- Retained Earnings
+
+ ### Revenue
+
+ - Field Services Revenue
+- Equipment Rental Revenue
+- Parts & Supplies Revenue
+- Other Revenue
+
+ ### COGS
+
+ - Parts Cost
+- Equipment Rental Direct Costs
+- Field Service Direct Costs
+- Subcontractor Costs
+
+ ### Operating Expenses
+
+ Include:
+
+ - Salaries & Wages
+- Benefits
+- Fuel
+- Vehicle Expense
+- Repairs & Maintenance
+- Insurance
+- Rent
+- Utilities
+- Telephone & Internet
+- Software
+- Office Supplies
+- Professional Fees
+- Advertising
+- Travel
+- Meals
+- Bank Fees
+- Interest
+- Depreciation
+
+ Every account must have:
+
+ - Account\_ID
+- Account\_Number
+- Account\_Name
+- Account\_Type
+- Financial\_Statement
+- Parent\_Account
+- Active
+
+---
+
+ # 6\. Customers
+
+ Create approximately 75–125 fictional business customers.
+
+ Fields:
+
+ - Customer\_ID
+- Customer\_Name
+- Industry
+- Province
+- City
+- Payment\_Terms
+- Credit\_Limit
+- Customer\_Status
+- Default\_Tax\_Code
+- Default\_Revenue\_Account
+
+ Use plausible fictional Canadian business names.
+
+ Customers should have realistic purchasing patterns.
+
+ Some customers should purchase primarily:
+
+ - field services
+- equipment rental
+- parts
+
+---
+
+ # 7\. Vendors
+
+ Create approximately 50–100 fictional vendors.
+
+ Categories:
+
+ - fuel
+- utilities
+- equipment maintenance
+- parts
+- insurance
+- software
+- office supplies
+- transportation
+- subcontractors
+- professional services
+- telecommunications
+- rent
+- safety equipment
+- industrial supplies
+
+ Fields:
+
+ - Vendor\_ID
+- Vendor\_Name
+- Vendor\_Category
+- Province
+- Payment\_Terms
+- GST\_Applicable
+- Default\_GL\_Account
+- Vendor\_Status
+
+---
+
+ # 8\. Employees
+
+ Create approximately 45–60 fictional employees.
+
+ Fields:
+
+ - Employee\_ID
+- Employee\_Name
+- Department
+- Position
+- Employment\_Type
+- Annual\_Salary
+- Hourly\_Rate
+- Start\_Date
+- Status
+
+ Do not include sensitive personal information.
+
+---
+
+ # 9\. Departments
+
+ Create:
+
+ - Field Services
+- Equipment Rental
+- Parts
+- Operations
+- Finance
+- Administration
+- Sales
+- Management
+
+---
+
+ # 10\. Locations
+
+ Create:
+
+ - Calgary Head Office
+- Calgary Yard
+- Equipment Yard
+- Service Shop
+- Field Operations
+
+---
+
+ # 11\. Projects
+
+ Create approximately 100–200 fictional jobs/projects.
+
+ Fields:
+
+ - Project\_ID
+- Project\_Name
+- Customer\_ID
+- Department\_ID
+- Project\_Manager
+- Start\_Date
+- End\_Date
+- Status
+- Budget\_Revenue
+- Budget\_Cost
+
+ Projects should connect logically to:
+
+ - sales
+- AR
+- labour
+- expenses
+- equipment
+- subcontractors
+
+---
+
+ # 12\. Fixed Assets
+
+ Create approximately 50–100 realistic fixed assets.
+
+ Examples:
+
+ - trucks
+- trailers
+- compressors
+- generators
+- pumps
+- service equipment
+- shop equipment
+- computers
+- office equipment
+
+ Fields:
+
+ - Asset\_ID
+- Asset\_Description
+- Asset\_Class
+- Purchase\_Date
+- Purchase\_Cost
+- Useful\_Life
+- Depreciation\_Method
+- Department\_ID
+- Location\_ID
+- Project\_ID
+- Status
+
+ Depreciation must be mathematically reproducible.
+
+---
+
+ # 13\. Products and Services
+
+ Create realistic products/services.
+
+ Include:
+
+ - equipment rental
+- field labour
+- maintenance
+- transportation
+- parts
+- consumables
+- safety equipment
+- equipment usage
+
+ Fields:
+
+ - Product\_ID
+- Description
+- Category
+- Revenue\_Account
+- COGS\_Account
+- Standard\_Price
+- Tax\_Code
+
+---
+
+ # 14\. Tax Codes
+
+ Create:
+
+ - GST 5%
+- GST exempt
+- GST zero-rated if appropriate
+
+ Fields:
+
+ - Tax\_Code
+- Description
+- Rate
+- Tax\_Type
+- Recoverable
+- Province/Scope
+
+ For normal Alberta taxable transactions, GST must calculate correctly at 5%.
+
+---
+
+ # 15\. ERP-Style Transaction Data
+
+ Create clean, structured transaction tables.
+
+ Include:
+
+ - GL\_Transactions
+- Journal\_Entries
+- AP\_Invoices
+- AP\_Payments
+- AR\_Invoices
+- AR\_Receipts
+- Purchase\_Orders
+- Sales\_Orders
+- Inventory\_Transactions
+- Bank\_Transactions
+- Credit\_Card\_Transactions
+- Expense\_Reports
+- Payroll\_Transactions
+- Fixed\_Asset\_Transactions
+
+ Use realistic ERP-style fields:
+
+ - Company\_Code
+- Fiscal\_Year
+- Fiscal\_Period
+- Posting\_Date
+- Document\_Date
+- Document\_ID
+- Document\_Type
+- Transaction\_ID
+- Line\_ID
+- Batch\_ID
+- Account\_ID
+- Account\_Name
+- Debit
+- Credit
+- Currency
+- Exchange\_Rate
+- Department\_ID
+- Location\_ID
+- Project\_ID
+- Customer\_ID
+- Vendor\_ID
+- Employee\_ID
+- Tax\_Code
+- Tax\_Amount
+- Description
+- Reference
+- Created\_By
+- Created\_Date
+- Approved\_By
+- Approval\_Date
+- Status
+
+ Use realistic IDs such as:
+
+ `AP-2026-00617`
+
+ `AR-2026-01931`
+
+ `JE-2026-004821`
+
+ `PO-2026-00421`
+
+ `SO-2026-01842`
+
+---
+
+ # 16\. Accounts Payable
+
+ Generate approximately 2,500–4,000 AP invoices.
+
+ Every AP invoice must have mathematically correct:
+
+ **Net Amount + GST = Gross Amount**
+
+ where GST applies.
+
+ Connect invoices logically to:
+
+ - vendors
+- purchase orders where appropriate
+- GL accounts
+- departments
+- projects
+- payments
+
+ Use realistic payment terms.
+
+ Create both:
+
+ - paid invoices
+- outstanding invoices
+
+ Outstanding invoices should correctly appear in AP aging.
+
+---
+
+ # 17\. Accounts Receivable
+
+ Generate approximately 3,000–5,000 AR invoices.
+
+ Connect:
+
+ **Customer → Sales Order → AR Invoice → AR Receipt**
+
+ where applicable.
+
+ Every invoice must calculate correctly.
+
+ Include realistic:
+
+ - current AR
+- 1–30 days
+- 31–60 days
+- 61–90 days
+- 90+ days
+
+ Outstanding invoices must correctly reconcile to the AR control account.
+
+---
+
+ # 18\. Sales Orders
+
+ Generate realistic sales orders.
+
+ Fields:
+
+ - Sales\_Order\_ID
+- Customer\_ID
+- Project\_ID
+- Product\_ID
+- Order\_Date
+- Quantity
+- Unit\_Price
+- Net\_Amount
+- Tax
+- Total
+- Status
+
+ Where appropriate:
+
+ **Sales Order → Invoice → Receipt**
+
+---
+
+ # 19\. Purchase Orders
+
+ Generate realistic purchase orders.
+
+ Fields:
+
+ - Purchase\_Order\_ID
+- Vendor\_ID
+- Product/Service\_ID
+- Project\_ID
+- Department\_ID
+- Order\_Date
+- Quantity
+- Unit\_Cost
+- Net\_Amount
+- GST
+- Total
+- Status
+
+ Where appropriate:
+
+ **Purchase Order → AP Invoice → Payment**
+
+---
+
+ # 20\. Bank
+
+ Generate approximately 12,000–18,000 legitimate bank transactions.
+
+ Include:
+
+ - customer receipts
+- vendor payments
+- payroll
+- utilities
+- rent
+- bank fees
+- loan payments
+- transfers
+- GST payments
+- miscellaneous business transactions
+
+ The bank balance must mathematically reconcile.
+
+ Include legitimate timing differences such as outstanding cheques or deposits in transit if useful for reconciliation demonstrations.
+
+ These must be intentional accounting timing items, not data errors.
+
+---
+
+ # 21\. Credit Cards
+
+ Generate approximately 4,000–6,000 legitimate business credit-card transactions.
+
+ Categories:
+
+ - fuel
+- travel
+- meals
+- office supplies
+- software
+- hardware
+- vehicle expenses
+- maintenance
+- hotel
+- transportation
+
+ Connect transactions to:
+
+ - employees
+- departments
+- projects
+- GL accounts
+
+ All legitimate transactions should be properly coded in the golden dataset.
+
+---
+
+ # 22\. Expense Reports
+
+ Generate approximately 1,500–2,500 expense records.
+
+ Include:
+
+ - Employee\_ID
+- Date
+- Merchant
+- Expense\_Category
+- Project\_ID
+- Amount
+- GST
+- Receipt\_Status
+- Approval\_Status
+- Reimbursement\_Status
+
+ All records in this golden dataset should be valid and complete.
+
+---
+
+ # 23\. Payroll
+
+ Generate realistic payroll accounting activity for the two years.
+
+ Focus on accounting rather than detailed Canadian payroll compliance calculations.
+
+ Include:
+
+ - payroll period
+- department
+- employee
+- gross wages
+- employer benefits
+- payroll liabilities
+- payroll payment
+
+ Payroll journal entries must post correctly to the GL.
+
+---
+
+ # 24\. Inventory
+
+ Create inventory for the parts division.
+
+ Include:
+
+ - SKU
+- Product
+- Warehouse
+- Transaction Type
+- Quantity
+- Unit Cost
+- Total Cost
+- Purchase Order
+- Sales Order
+- Date
+
+ Transaction types:
+
+ - Purchase
+- Sale
+- Return
+- Adjustment
+- Transfer
+
+ Inventory quantities and values must remain mathematically consistent.
+
+---
+
+ # 25\. Journal Entries
+
+ Generate realistic journal entries for:
+
+ - sales
+- AP
+- AR
+- payments
+- payroll
+- depreciation
+- accruals
+- prepaid expenses
+- GST
+- inventory
+- bank fees
+- interest
+- month-end adjustments
+
+ Every journal entry must satisfy:
+
+ **Total Debits = Total Credits**
+
+ No exceptions.
+
+---
+
+ # 26\. Month-End Close
+
+ Create monthly activity supporting month-end close.
+
+ Include legitimate:
+
+ - accrued expenses
+- prepaid expenses
+- depreciation
+- payroll accruals
+- utilities accruals
+- insurance prepayments
+- outstanding invoices
+- bank timing differences
+- credit-card timing differences
+
+ Generate adjusting journal entries.
+
+ The month-end process must ultimately reconcile.
+
+---
+
+ # 27\. GST
+
+ Generate GST accounting that can be independently recalculated.
+
+ For each reporting period:
+
+ **GST Collected − Recoverable GST/ITCs = Net GST Payable or Receivable**
+
+ Create quarterly reporting periods.
+
+ Ensure the GST control accounts reconcile with the underlying transactions.
+
+---
+
+ # 28\. Opening Balances
+
+ Create January 1, 2025 opening balances.
+
+ The opening trial balance must balance.
+
+ Opening balances must be reasonable for the size of the company.
+
+---
+
+ # 29\. Trial Balance
+
+ Create:
+
+ `Expected_Trial_Balance`
+
+ Include:
+
+ - Account
+- Opening Debit
+- Opening Credit
+- Period Debit
+- Period Credit
+- Closing Debit
+- Closing Credit
+
+ The trial balance must balance for:
+
+ - each month
+- each quarter
+- each year
+
+---
+
+ # 30\. Financial Statements
+
+ Create expected-result sheets for:
+
+ - Income Statement / P&L
+- Balance Sheet
+- Cash Flow
+- Revenue by Division
+- Expense Summary
+
+ These must be mathematically derived from the underlying accounting data.
+
+ Do not manually invent financial statement numbers that don't reconcile with the GL.
+
+---
+
+ # 31\. Budget
+
+ Create monthly budgets for:
+
+ - revenue
+- COGS
+- payroll
+- fuel
+- maintenance
+- utilities
+- rent
+- other major expenses
+
+ Budgets should be realistic and allow later variance analysis.
+
+---
+
+ # 32\. Monthly Balances
+
+ Create a summary table showing monthly balances for major accounts.
+
+ Include:
+
+ - Revenue
+- COGS
+- Gross Profit
+- Operating Expenses
+- Net Income
+- Cash
+- AR
+- AP
+- Inventory
+- Fixed Assets
+- GST Payable
+
+ This will make application development and testing easier.
+
+---
+
+ # 33\. Audit Trail
+
+ Every important transaction should contain enough metadata to trace:
+
+ **Financial Statement → GL → Journal Entry → Subledger → Source Document**
+
+ Use:
+
+ - Document\_ID
+- Transaction\_ID
+- Source\_ID
+- Batch\_ID
+- Reference
+
+ The data model should support drill-down from financial statements to source transactions.
+
+---
+
+ # 34\. Data Dictionary
+
+ Create a complete `Data_Dictionary` sheet.
+
+ Fields:
+
+ - Table
+- Field
+- Description
+- Data Type
+- Required
+- Example
+- Primary Key
+- Foreign Key
+- Related Table
+
+ Document the relationships between tables.
+
+---
+
+ # 35\. Expected Results
+
+ Create `Expected_Results`.
+
+ Include:
+
+ - annual revenue
+- monthly revenue
+- gross profit
+- operating expenses
+- net income
+- cash balance
+- AR
+- AP
+- GST payable
+- inventory
+- fixed assets
+- depreciation
+- AR aging
+- AP aging
+- revenue by division
+- expense by category
+- monthly variance
+
+ These values must be calculated from the underlying data.
+
+ They will later be used as automated tests for my application.
+
+---
+
+ # 36\. Accounting Integrity Validation
+
+ Before delivering the workbook, programmatically validate all of the following:
+
+ ### General Ledger
+
+ - Debits = Credits
+- GL agrees with journal entries
+- Account balances calculate correctly
+
+ ### AP
+
+ - AP subledger = AP control account
+- Invoice totals are correct
+- Payment totals are correct
+- Aging is correct
+
+ ### AR
+
+ - AR subledger = AR control account
+- Invoice totals are correct
+- Receipt totals are correct
+- Aging is correct
+
+ ### Bank
+
+ - Opening balance + transactions = ending balance
+- Reconciliation can be performed
+
+ ### Inventory
+
+ - Beginning quantity + purchases − sales ± adjustments = ending quantity
+- Inventory value is mathematically correct
+
+ ### Fixed Assets
+
+ - Cost − accumulated depreciation = net book value
+
+ ### GST
+
+ - Transaction-level GST = reporting-period GST
+- GST control account reconciles
+
+ ### Payroll
+
+ - Payroll entries balance and post correctly
+
+ ### Trial Balance
+
+ - Debits = Credits
+
+ ### Financial Statements
+
+ - P&L agrees with GL
+- Balance Sheet agrees with GL
+- Net income flows correctly into equity
+- Cash Flow reconciles to cash movement
+
+ ### Referential Integrity
+
+ All required foreign keys must point to valid records.
+
+---
+
+ # 37\. Scale
+
+ Target approximately:
+
+ - 30,000–50,000+ transactional records overall
+- 50,000+ GL lines if practical
+- 2 complete fiscal years
+- hundreds/thousands of documents
+- 75–125 customers
+- 50–100 vendors
+- 45–60 employees
+- 50–100 fixed assets
+- 100–200 projects
+
+ Prioritize:
+
+ **Accounting integrity \> relational integrity \> realism \> scale**
+
+ Do not inflate the dataset with meaningless records just to increase row count.
+
+---
+
+ # 38\. Important: Do NOT Add Cleaning Errors
+
+ This version must be pristine.
+
+ Do NOT introduce:
+
+ - duplicates
+- missing dates
+- missing accounts
+- vendor spelling variations
+- incorrect GST
+- broken references
+- invalid accounts
+- malformed dates
+- incorrect amounts
+- unbalanced journal entries
+- unexplained reconciliation differences
+
+ I will create those later in a separate "dirty data" generation process.
+
+ The current workbook is the **golden master**.
+
+---
+
+ # 39. Recommended Workbook Structure
+
+ Create these sheets:
+
+ ### Master Data
+
+ 1. Company
+2. Chart\_of\_Accounts
+3. Customers
+4. Vendors
+5. Employees
+6. Departments
+7. Locations
+8. Projects
+9. Equipment
+10. Fixed\_Assets
+11. Tax\_Codes
+12. Payment\_Terms
+13. Products\_Services
+
+ ### Transaction Data
+
+ 14. GL\_Transactions
+15. Journal\_Entries
+16. AP\_Invoices
+17. AP\_Payments
+18. AR\_Invoices
+19. AR\_Receipts
+20. Purchase\_Orders
+21. Sales\_Orders
+22. Inventory\_Transactions
+23. Bank\_Transactions
+24. Credit\_Card\_Transactions
+25. Expense\_Reports
+26. Payroll\_Transactions
+27. Fixed\_Asset\_Transactions
+
+ ### Accounting Support
+
+ 28. Opening\_Balances
+29. Trial\_Balance
+30. Bank\_Statements
+31. GST\_Transactions
+32. Budget
+33. Monthly\_Balances
+34. Expected\_Results
+
+ ### Documentation
+
+ 35. Data\_Dictionary
+36. README
+
+---
+
+ # 40\. Final Output
+
+ Generate:
+
+ **`Prairie_North_Energy_ERP_Golden_Master.xlsx`**
+
+ This workbook should represent the clean, authoritative accounting dataset.
+
+ Also, if possible, create CSV versions of the major transaction tables for eventual application development.
+
+ The workbook should be usable as the source of truth for a portfolio application.
+
+---
+
+ # 41\. Final Objective
+
+ I am eventually going to create a second layer that takes this perfect dataset and intentionally introduces realistic problems.
+
+ The eventual system will therefore be:
+
+ **GOLDEN MASTER**
+
+ ↓
+
+ **SIMULATED ERP EXPORT**
+
+ ↓
+
+ **DATA CLEANING / VALIDATION**
+
+ ↓
+
+ **CLEAN ACCOUNTING DATA**
+
+ ↓
+
+ **AP / AR / GL**
+
+ ↓
+
+ **RECONCILIATIONS**
+
+ ↓
+
+ **MONTH-END CLOSE**
+
+ ↓
+
+ **TRIAL BALANCE**
+
+ ↓
+
+ **FINANCIAL STATEMENTS**
+
+ ↓
+
+ **VARIANCE ANALYSIS**
+
+ ↓
+
+ **MANAGEMENT REPORTING**
+
+ ↓
+
+ **AUDIT SUPPORT**
+
+ The golden master must therefore be sufficiently detailed, interconnected, realistic, and mathematically correct to support the entire application.
+
+ Do not optimize for making the workbook look impressive.
+
+ Optimize for making the **underlying accounting system correct**.
+
+ The **golden-master approach** is definitely the way I'd do it.
+
+ Then later we can make a second generator that takes this pristine workbook and says, essentially:
+
+ > "Take 2% of AP records, 1% of bank records, 1% of AR records, etc., and introduce controlled real-world data-quality issues."
+
+ That gives you something particularly valuable: **you'll know exactly what the correct answer is.** So when your app says _"I found 47 exceptions"_ or _"AP doesn't reconcile by $4,250"_, you can automatically test whether it found the right problem and whether the user's correction actually fixes it.
