@@ -37,9 +37,7 @@ async function loadEmployment() {
         const response = await fetch("employment.json");
 
         if (!response.ok) {
-            throw new Error(
-                "Employment history could not be loaded."
-            );
+            throw new Error("Employment history could not be loaded.");
         }
 
         const data = await response.json();
@@ -47,8 +45,7 @@ async function loadEmployment() {
 
         data.employment.forEach((job) => {
 
-            const element =
-                document.createElement("article");
+            const element = document.createElement("article");
 
             element.className = "employment";
 
@@ -71,13 +68,11 @@ async function loadEmployment() {
                 <ul>
 
                     ${job.responsibilities
-                        .map(
-                            (item) => `
-                                <li>
-                                    ${item}
-                                </li>
-                            `
-                        )
+                        .map((responsibility) => `
+                            <li>
+                                ${responsibility}
+                            </li>
+                        `)
                         .join("")}
 
                 </ul>
@@ -102,6 +97,8 @@ async function loadEmployment() {
 
     }
 }
+
+
 /* =========================================
    LOAD TECHNICAL SKILLS
 ========================================= */
@@ -201,6 +198,8 @@ async function loadTechnicalSkills() {
 
     }
 }
+
+
 
 
 /* =========================================
