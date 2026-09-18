@@ -25,6 +25,12 @@ pages = {
 
     "01  OVERVIEW": [
 
+        st.Page(
+            "pages/0_intro.py",
+            title="Intro",
+            icon=":material/dashboard:",
+        ),
+
         # st.Page(
         #     "pages/1_dashboard.py",
         #     title="Dashboard",
