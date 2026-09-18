@@ -31,11 +31,11 @@ pages = {
             icon=":material/dashboard:",
         ),
 
-        # st.Page(
-        #     "pages/1_dashboard.py",
-        #     title="Dashboard",
-        #     icon=":material/dashboard:",
-        # ),
+        st.Page(
+            "pages/1_dashboard.py",
+            title="Dashboard",
+            icon=":material/dashboard:",
+        ),
 
     ],
 
