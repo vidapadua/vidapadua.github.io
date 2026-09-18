@@ -1,0 +1,143 @@
+company
+Rows: 1 | Columns: 9
+Company_ID, Company_Name, Legal_Name, Province, Country, Currency, Fiscal_Year_End, GST_Registration, GST_Rate
+
+accounts
+Rows: 42 | Columns: 7
+Account_ID, Account_Number, Account_Name, Account_Type, Financial_Statement, Parent_Account, Active
+
+customers
+Rows: 100 | Columns: 10
+Customer_ID, Customer_Name, Industry, Province, City, Payment_Terms, Credit_Limit, Customer_Status, Default_Tax_Code, Default_Revenue_Account
+
+vendors
+Rows: 70 | Columns: 8
+Vendor_ID, Vendor_Name, Vendor_Category, Province, Payment_Terms, GST_Applicable, Default_GL_Account, Vendor_Status
+
+employees
+Rows: 58 | Columns: 9
+Employee_ID, Employee_Name, Department, Position, Employment_Type, Annual_Salary, Hourly_Rate, Start_Date, Status
+
+departments
+Rows: 8 | Columns: 2
+Department_ID, Department_Name
+
+locations
+Rows: 5 | Columns: 2
+Location_ID, Location_Name
+
+projects
+Rows: 150 | Columns: 10
+Project_ID, Project_Name, Customer_ID, Department_ID, Project_Manager, Start_Date, End_Date, Status, Budget_Revenue, Budget_Cost
+
+fixed_assets
+Rows: 80 | Columns: 11
+Asset_ID, Asset_Description, Asset_Class, Purchase_Date, Purchase_Cost, Useful_Life, Depreciation_Method, Department_ID, Location_ID, Project_ID, Status
+
+products_services
+Rows: 10 | Columns: 7
+Product_ID, Description, Category, Revenue_Account, COGS_Account, Standard_Price, Tax_Code
+
+tax_codes
+Rows: 3 | Columns: 6
+Tax_Code, Description, Rate, Tax_Type, Recoverable, Province_Scope
+
+GL_Transactions
+Rows: 4 | Columns: 3
+Payment_Term_ID, Description, Days
+
+gl
+Rows: 20668 | Columns: 31
+Company_Code, Fiscal_Year, Fiscal_Period, Posting_Date, Document_Date, Document_ID, Document_Type, Transaction_ID, Line_ID, Batch_ID, Account_ID, Account_Name, Debit, Credit, Currency, Exchange_Rate, Department_ID, Location_ID, Project_ID, Customer_ID, Vendor_ID, Employee_ID, Tax_Code, Tax_Amount, Description, Reference, Created_By, Created_Date, Approved_By, Approval_Date, Status
+
+journal_entries
+Rows: 8188 | Columns: 9
+Journal_Entry_ID, Posting_Date, Document_Type, Source_ID, Batch_ID, Description, Total_Debit, Total_Credit, Status
+
+ap_invoices
+Rows: 1761 | Columns: 17
+AP_Invoice_ID, Purchase_Order_ID, Vendor_ID, Vendor_Name, Project_ID, Department_ID, Invoice_Date, Due_Date, Expense_Account, Net_Amount, GST, Gross_Amount, Paid_Amount, Outstanding_Balance, Status, Tax_Code, Aging_Bucket
+
+ap_payments
+Rows: 1562 | Columns: 7
+AP_Payment_ID, AP_Invoice_ID, Vendor_ID, Payment_Date, Amount, Bank_Account_ID, Reference
+
+ar_invoices
+Rows: 2469 | Columns: 16
+AR_Invoice_ID, Sales_Order_ID, Customer_ID, Customer_Name, Project_ID, Invoice_Date, Due_Date, Revenue_Account, Net_Amount, GST, Gross_Amount, Paid_Amount, Outstanding_Balance, Status, Tax_Code, Aging_Bucket
+
+ar_receipts
+Rows: 2099 | Columns: 7
+AR_Receipt_ID, AR_Invoice_ID, Customer_ID, Receipt_Date, Amount, Bank_Account_ID, Reference
+
+sales_orders
+Rows: 2469 | Columns: 11
+Sales_Order_ID, Customer_ID, Project_ID, Product_ID, Order_Date, Quantity, Unit_Price, Net_Amount, GST, Total, Status
+
+inventory_transactions
+Rows: 3500 | Columns: 11
+Inventory_Transaction_ID, SKU, Product, Warehouse, Transaction_Type, Quantity, Unit_Cost, Total_Cost, Purchase_Order_ID, Sales_Order_ID, Date
+
+bank
+Rows: 3935 | Columns: 11
+Bank_Transaction_ID, Posting_Date, Document_ID, Document_Type, Description, Debit, Credit, Bank_Account_ID, Value_Date, Reference, Running_Balance
+
+credit_card_transactions
+Rows: 4500 | Columns: 12
+Credit_Card_Transaction_ID, Transaction_Date, Employee_ID, Department_ID, Project_ID, Merchant, Category, GL_Account_ID, Net_Amount, GST, Total_Amount, Status
+
+expense_reports
+Rows: 1800 | Columns: 12
+Expense_Report_ID, Employee_ID, Date, Merchant, Expense_Category, Project_ID, Amount, GST, Total_Amount, Receipt_Status, Approval_Status, Reimbursement_Status
+
+payroll_transactions
+Rows: 1392 | Columns: 10
+Payroll_Transaction_ID, Payroll_Period, Employee_ID, Department_ID, Gross_Wages, Employer_Benefits, Employee_Withholdings, Net_Pay, Payroll_Liability, Payment_Status
+
+fixed_asset_transactions
+Rows: 80 | Columns: 8
+Fixed_Asset_Transaction_ID, Asset_ID, Transaction_Date, Transaction_Type, Amount, Debit_Account, Credit_Account, Reference
+
+opening_balances
+Rows: 16 | Columns: 4
+Account_ID, Opening_Debit, Opening_Credit, As_Of_Date
+
+trial_balance
+Rows: 33 | Columns: 8
+Account_ID, Account_Name, Opening_Debit, Opening_Credit, Period_Debit, Period_Credit, Closing_Debit, Closing_Credit
+
+gst_transactions
+Rows: 4230 | Columns: 7
+Source_ID, Date, GST_Amount, Transaction_Type, Direction, Tax_Code, Rate
+
+monthly_balances
+Rows: 24 | Columns: 9
+Month, Revenue, COGS, Gross_Profit, Operating_Expenses, Net_Income, Cash, AR_Net_Movement, AP_Net_Movement
+
+ar_aging
+Rows: 6 | Columns: 3
+Aging_Bucket, Invoice_Count, Outstanding_Balance
+
+income_statement
+Rows: 3 | Columns: 2
+Metric, Amount
+
+revenue_by_account
+Rows: 3 | Columns: 3
+Account_ID, Account_Name, Amount
+
+expense_summary
+Rows: 14 | Columns: 3
+Account_ID, Account_Name, Amount
+
+expected_results
+Rows: 12 | Columns: 2
+Metric, Value
+
+validation_results
+Rows: 10 | Columns: 3
+Check, Passed, Detail
+
+data_dictionary
+Rows: 288 | Columns: 9
+Table, Field, Description, Data_Type, Required, Example, Primary_Key, Foreign_Key, Related_Table
