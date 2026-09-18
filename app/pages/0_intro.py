@@ -2,7 +2,7 @@ import streamlit as st
 
 
 st.set_page_config(
-    page_title="Peak Accounting System",
+    page_title="Vida's Oil & Gas Company",
     page_icon="📊",
     layout="wide",
 )
@@ -267,5 +267,5 @@ with t4:
 st.write("")
 
 st.caption(
-    "Sample data only • Created for demonstration and presentation purposes"
+    "Sample data only • Created for demonstration and presentation purposes. Created by Vida Padua 2026."
 )
