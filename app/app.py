@@ -15,172 +15,178 @@ st.set_page_config(
 
 pages = {
 
-    # -----------------------------------------------------
+    # =====================================================
     # CORE
-    # -----------------------------------------------------
+    # =====================================================
+
     "": [
+
         st.Page(
-            "pages/transactions.py",
+            "pages/2_transactions.py",
             title="Transactions",
             icon=":material/receipt_long:",
         ),
 
         st.Page(
-            "pages/chart_of_accounts.py",
+            "pages/3_chart_of_accounts.py",
             title="Chart of Accounts",
             icon=":material/account_tree:",
         ),
 
         st.Page(
-            "pages/general_ledger.py",
+            "pages/4_general_ledger.py",
             title="General Ledger",
             icon=":material/menu_book:",
         ),
 
         st.Page(
-            "pages/journal_entries.py",
+            "pages/5_journal_entries.py",
             title="Journal Entries",
             icon=":material/edit_note:",
         ),
 
         st.Page(
-            "pages/accounts_payable.py",
+            "pages/6_accounts_payable.py",
             title="Accounts Payable",
             icon=":material/payments:",
         ),
 
         st.Page(
-            "pages/accounts_receivable.py",
+            "pages/7_accounts_receivable.py",
             title="Accounts Receivable",
             icon=":material/receipt:",
         ),
 
         st.Page(
-            "pages/expenses.py",
+            "pages/8_expenses.py",
             title="Expenses",
             icon=":material/receipt_long:",
         ),
 
         st.Page(
-            "pages/banking.py",
+            "pages/9_banking.py",
             title="Banking",
             icon=":material/account_balance:",
         ),
     ],
 
 
-    # -----------------------------------------------------
-    # 01 RECONCILIATIONS
-    # -----------------------------------------------------
+    # =====================================================
+    # 01 — RECONCILIATIONS
+    # =====================================================
+
     "01  RECONCILIATIONS": [
 
         st.Page(
-            "pages/1_Bank_Reconciliation.py",
+            "pages/10_bank_reconciliation.py",
             title="Bank Reconciliation",
             icon=":material/account_balance:",
         ),
 
         st.Page(
-            "pages/2_Credit_Card_Reconciliation.py",
+            "pages/11_credit_card_reconciliation.py",
             title="Credit Card Reconciliation",
             icon=":material/credit_card:",
         ),
 
         st.Page(
-            "pages/3_Account_Reconciliations.py",
+            "pages/12_account_reconciliations.py",
             title="Account Reconciliations",
             icon=":material/balance:",
         ),
 
         st.Page(
-            "pages/4_Month_End_Close.py",
+            "pages/13_month_end_close.py",
             title="Month-End Close",
             icon=":material/event_available:",
         ),
     ],
 
 
-    # -----------------------------------------------------
-    # 02 FINANCIAL REPORTING
-    # -----------------------------------------------------
+    # =====================================================
+    # 02 — FINANCIAL REPORTING
+    # =====================================================
+
     "02  FINANCIAL REPORTING": [
 
         st.Page(
-            "pages/5_Income_Statement.py",
+            "pages/14_income_statement.py",
             title="Income Statement",
             icon=":material/monitoring:",
         ),
 
         st.Page(
-            "pages/6_Balance_Sheet.py",
+            "pages/15_balance_sheet.py",
             title="Balance Sheet",
             icon=":material/account_balance_wallet:",
         ),
 
         st.Page(
-            "pages/7_Cash_Flow.py",
+            "pages/16_cash_flow.py",
             title="Cash Flow",
             icon=":material/waterfall_chart:",
         ),
 
         st.Page(
-            "pages/8_Management_Reporting.py",
+            "pages/17_management_reporting.py",
             title="Management Reporting",
             icon=":material/analytics:",
         ),
     ],
 
 
-    # -----------------------------------------------------
-    # 03 ANALYSIS
-    # -----------------------------------------------------
+    # =====================================================
+    # 03 — ANALYSIS
+    # =====================================================
+
     "03  ANALYSIS": [
 
         st.Page(
-            "pages/9_Variance_Analysis.py",
+            "pages/18_variance_analysis.py",
             title="Variance Analysis",
             icon=":material/compare_arrows:",
         ),
 
         st.Page(
-            "pages/10_Trends.py",
+            "pages/19_trends.py",
             title="Trends",
             icon=":material/trending_up:",
         ),
 
         st.Page(
-            "pages/11_Year_over_Year.py",
+            "pages/20_year_over_year.py",
             title="Year-over-Year",
             icon=":material/show_chart:",
         ),
     ],
 
 
-    # -----------------------------------------------------
-    # 04 COMPLIANCE & AUDIT
-    # -----------------------------------------------------
+    # =====================================================
+    # 04 — COMPLIANCE & AUDIT
+    # =====================================================
+
     "04  COMPLIANCE & AUDIT": [
 
         st.Page(
-            "pages/12_GST.py",
+            "pages/21_gst.py",
             title="GST",
             icon=":material/receipt_long:",
         ),
 
         st.Page(
-            "pages/13_Audit_Support.py",
+            "pages/22_audit_support.py",
             title="Audit Support",
             icon=":material/search:",
         ),
 
         st.Page(
-            "pages/14_Working_Papers.py",
+            "pages/23_working_papers.py",
             title="Working Papers",
             icon=":material/description:",
         ),
 
         st.Page(
-            "pages/15_Internal_Controls.py",
+            "pages/24_internal_controls.py",
             title="Internal Controls",
             icon=":material/shield:",
         ),
@@ -189,7 +195,7 @@ pages = {
 
 
 # =========================================================
-# RUN NAVIGATION
+# START NAVIGATION
 # =========================================================
 
 pg = st.navigation(pages)
