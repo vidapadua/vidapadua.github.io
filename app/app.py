@@ -1,9 +1,13 @@
 import streamlit as st
 
 
+# =========================================================
+# PAGE CONFIG
+# =========================================================
+
 st.set_page_config(
-    page_title="Finance System",
-    page_icon="💰",
+    page_title="Peak Accounting System",
+    page_icon="📊",
     layout="wide",
     initial_sidebar_state="expanded",
 )
@@ -16,10 +20,25 @@ st.set_page_config(
 pages = {
 
     # =====================================================
-    # CORE
+    # 01 OVERVIEW
     # =====================================================
 
-    "": [
+    "01  OVERVIEW": [
+
+        st.Page(
+            "pages/1_dashboard.py",
+            title="Dashboard",
+            icon=":material/dashboard:",
+        ),
+
+    ],
+
+
+    # =====================================================
+    # 02 DATA & LEDGER
+    # =====================================================
+
+    "02  DATA & LEDGER": [
 
         st.Page(
             "pages/2_transactions.py",
@@ -45,6 +64,15 @@ pages = {
             icon=":material/edit_note:",
         ),
 
+    ],
+
+
+    # =====================================================
+    # 03 OPERATIONS
+    # =====================================================
+
+    "03  OPERATIONS": [
+
         st.Page(
             "pages/6_accounts_payable.py",
             title="Accounts Payable",
@@ -68,14 +96,15 @@ pages = {
             title="Banking",
             icon=":material/account_balance:",
         ),
+
     ],
 
 
     # =====================================================
-    # 01 — RECONCILIATIONS
+    # 04 CLOSE & RECONCILIATION
     # =====================================================
 
-    "01  RECONCILIATIONS": [
+    "04  CLOSE & RECONCILIATION": [
 
         st.Page(
             "pages/10_bank_reconciliation.py",
@@ -100,14 +129,15 @@ pages = {
             title="Month-End Close",
             icon=":material/event_available:",
         ),
+
     ],
 
 
     # =====================================================
-    # 02 — FINANCIAL REPORTING
+    # 05 FINANCIAL REPORTING
     # =====================================================
 
-    "02  FINANCIAL REPORTING": [
+    "05  FINANCIAL REPORTING": [
 
         st.Page(
             "pages/14_income_statement.py",
@@ -132,14 +162,15 @@ pages = {
             title="Management Reporting",
             icon=":material/analytics:",
         ),
+
     ],
 
 
     # =====================================================
-    # 03 — ANALYSIS
+    # 06 ANALYSIS
     # =====================================================
 
-    "03  ANALYSIS": [
+    "06  ANALYSIS": [
 
         st.Page(
             "pages/18_variance_analysis.py",
@@ -158,14 +189,15 @@ pages = {
             title="Year-over-Year",
             icon=":material/show_chart:",
         ),
+
     ],
 
 
     # =====================================================
-    # 04 — COMPLIANCE & AUDIT
+    # 07 COMPLIANCE & AUDIT
     # =====================================================
 
-    "04  COMPLIANCE & AUDIT": [
+    "07  COMPLIANCE & AUDIT": [
 
         st.Page(
             "pages/21_gst.py",
@@ -190,14 +222,45 @@ pages = {
             title="Internal Controls",
             icon=":material/shield:",
         ),
+
+    ],
+
+
+    # =====================================================
+    # 08 DATA & EXCEL
+    # =====================================================
+
+    "08  DATA & EXCEL": [
+
+        st.Page(
+            "pages/25_data_cleaning.py",
+            title="Data Cleaning",
+            icon=":material/cleaning_services:",
+        ),
+
+        st.Page(
+            "pages/26_excel_tools.py",
+            title="Excel Tools",
+            icon=":material/table_view:",
+        ),
+
+        st.Page(
+            "pages/27_validation.py",
+            title="Validation",
+            icon=":material/fact_check:",
+        ),
+
     ],
 }
 
 
 # =========================================================
-# START NAVIGATION
+# RUN APP
 # =========================================================
 
-pg = st.navigation(pages)
+pg = st.navigation(
+    pages,
+    position="sidebar",
+)
 
 pg.run()
