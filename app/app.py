@@ -25,11 +25,11 @@ pages = {
 
     "01  OVERVIEW": [
 
-        st.Page(
-            "pages/1_dashboard.py",
-            title="Dashboard",
-            icon=":material/dashboard:",
-        ),
+        # st.Page(
+        #     "pages/1_dashboard.py",
+        #     title="Dashboard",
+        #     icon=":material/dashboard:",
+        # ),
 
     ],
 
@@ -232,23 +232,23 @@ pages = {
 
     "08  DATA & EXCEL": [
 
-        st.Page(
-            "pages/25_data_cleaning.py",
-            title="Data Cleaning",
-            icon=":material/cleaning_services:",
-        ),
-
-        st.Page(
-            "pages/26_excel_tools.py",
-            title="Excel Tools",
-            icon=":material/table_view:",
-        ),
-
-        st.Page(
-            "pages/27_validation.py",
-            title="Validation",
-            icon=":material/fact_check:",
-        ),
+        # st.Page(
+        #     "pages/25_data_cleaning.py",
+        #     title="Data Cleaning",
+        #     icon=":material/cleaning_services:",
+        # ),
+        #
+        # st.Page(
+        #     "pages/26_excel_tools.py",
+        #     title="Excel Tools",
+        #     icon=":material/table_view:",
+        # ),
+        #
+        # st.Page(
+        #     "pages/27_validation.py",
+        #     title="Validation",
+        #     icon=":material/fact_check:",
+        # ),
 
     ],
 }
