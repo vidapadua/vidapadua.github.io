@@ -96,29 +96,32 @@ st.markdown(
 # HERO — ALL IMPORTANT TEXT AT THE TOP
 # =========================================================
 
-st.markdown(
+st.title("📊 Peak Accounting System")
+
+st.subheader("A complete accounting workflow built with Python")
+
+st.write(
     """
-    <div class="hero">
-        <h1>📊 Peak Accounting System</h1>
-
-        <p>
-            A Python-based accounting application built with Streamlit.
-        </p>
-
-        <p>
-            This project uses a large sample accounting dataset to
-            demonstrate the complete accounting cycle — from transactions
-            and the general ledger through reconciliation, month-end close,
-            financial reporting, analysis, and audit.
-        </p>
-
-        <p>
-            <strong>Built to show how accounting and technology can work together.</strong>
-        </p>
-    </div>
-    """,
-    unsafe_allow_html=True,
+    This application was built to demonstrate the accounting process
+    from transaction entry through reconciliation, month-end close,
+    financial reporting, analysis, and audit.
+    """
 )
+
+st.write(
+    """
+    It uses a large sample accounting dataset with 20,000+ general
+    ledger transactions and data across customers, vendors, AP, AR,
+    banking, expenses, payroll, fixed assets, GST, and more.
+    """
+)
+
+st.caption(
+    "Built with Python, Pandas, Streamlit, and Excel • Sample data for demonstration"
+)
+
+st.divider()
+
 
 
 # =========================================================
